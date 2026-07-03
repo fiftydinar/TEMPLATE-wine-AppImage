@@ -12,11 +12,11 @@ export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-ico
 export DESKTOP=/usr/share/applications/wine.desktop
 export APPNAME=Rufus
 export MAIN_BIN=rufus
+export STRACE_BINARY=wine
+export STRACE_FLAGS=/tmp/rufus.exe
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
 export WINE_MAIN_BIN=rufus.exe
-export STRACE_BINARY=wine
-export STRACE_FLAGS=/tmp/rufus.exe
 #export WINE_STRACE_TIME=15
 #export WINE_STRACE_BINARY=/PATH/TO/EXE_HERE
 #export WINE_STRACE_FLAGS='--disable-gpu'
