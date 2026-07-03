@@ -37,8 +37,17 @@ chmod +x ./AppDir/share/rufus/rufus.exe
 cp -v ./AppDir/share/rufus/rufus.exe /tmp/rufus.exe
 wine-strace /tmp/rufus.exe
 
+cat <<EOF > ./AppDir/bin/"$WINE_MAIN_BIN"
+#!/bin/sh
+if [ ! -d "\${WINEPREFIX}" ]; then
+    wineboot
+fi
+cp -rn \${APPDIR}/share/"${WINE_MAIN_BIN}" "\${WINEPREFIX}"
+wine "\${WINEPREFIX}/${WINE_MAIN_BIN}/${WINE_MAIN_BIN}" "\$@"
+EOF
+
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
-quick-sharun /usr/bin/wine
+quick-sharun
 
 wine-fixes-after-deploy
 
