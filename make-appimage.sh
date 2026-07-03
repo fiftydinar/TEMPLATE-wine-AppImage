@@ -47,7 +47,7 @@ wine "\${WINEPREFIX}/${WINE_MAIN_BIN}/${WINE_MAIN_BIN}" "\$@"
 EOF
 
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
-quick-sharun
+quick-sharun /usr/bin/wine
 
 wine-fixes-after-deploy
 
