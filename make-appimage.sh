@@ -10,10 +10,10 @@ export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/bcf6aa9582f676e1c93d0022319e6055cd1f2de2/Papirus/64x64/apps/wine.svg
 export DESKTOP=/usr/share/applications/wine.desktop
-export APPNAME=RENAME_WI
+export APPNAME=BEAUTIFUL_WINE_APP_NAME
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
-export WINE_MAIN_BIN=NAME_OF_BIN
+export WINE_MAIN_BIN=WINE_BINARY_APP_NAME
 #export WINE_STRACE_TIME=15
 #export WINE_STRACE_BINARY=/PATH/TO/EXE_HERE
 #export WINE_STRACE_FLAGS='--disable-gpu'
