@@ -14,7 +14,7 @@ export APPNAME=Rufus
 export MAIN_BIN=rufus
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
-export WINE_MAIN_BIN=rufus
+export WINE_MAIN_BIN=rufus.exe
 export STRACE_BINARY=wine
 export STRACE_FLAGS=/tmp/rufus.exe
 #export WINE_STRACE_TIME=15
