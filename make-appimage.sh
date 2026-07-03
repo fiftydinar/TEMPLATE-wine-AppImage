@@ -37,7 +37,7 @@ chmod +x ./AppDir/share/rufus/rufus.exe
 cp -v ./AppDir/share/rufus/rufus.exe /tmp/rufus.exe
 wine-strace /tmp/rufus.exe
 
-mkdir -p ./AppDir/bin/"$WINE_MAIN_BIN"
+mkdir -p ./AppDir/bin
 cat <<EOF > ./AppDir/bin/"$WINE_MAIN_BIN"
 #!/bin/sh
 if [ ! -d "\${WINEPREFIX}" ]; then
