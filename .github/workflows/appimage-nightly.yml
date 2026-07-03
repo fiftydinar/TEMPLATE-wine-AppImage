@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Preparing Container
-        uses: fiftydinar/anylinux-wine-setup-action@432ceae3b2c529eb828c608ce00ab42915db3e44
+        uses: fiftydinar/anylinux-wine-setup-action@a0633559a2eba4d6fc42a518de3eb608096cc054
       - name: Install Dependencies
         run: DEVEL_RELEASE=1 /bin/sh ./get-dependencies.sh
       - name: Make AppImage
