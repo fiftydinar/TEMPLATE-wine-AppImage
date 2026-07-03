@@ -2,6 +2,9 @@
 
 set -eu
 
+QUICK_SHARUN_DEBUG=1
+export QUICK_SHARUN_DEBUG
+
 ARCH=$(uname -m)
 VERSION=4.15
 export ARCH VERSION
