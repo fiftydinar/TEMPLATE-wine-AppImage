@@ -26,6 +26,7 @@ export WINE_MAIN_BIN=WINE_BINARY_NAME
 #export DEPLOY_OPENGL=1
 
 # Download and install Windows app to ./AppDir/share folder (portable version is preferred)
+# folder must match WINE_MAIN_BIN, so it is ./AppDir/share/WINE_MAIN_BIN/
 
 # Trace and cleanup unneded wine dependencies
 wine-strace /PATH/TO/EXE_HERE
