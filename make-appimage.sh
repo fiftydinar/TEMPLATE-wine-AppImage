@@ -3,17 +3,19 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q wine | awk '{print $2; exit}') # example command to get version of application here
+VERSION=4.15
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/bcf6aa9582f676e1c93d0022319e6055cd1f2de2/Papirus/64x64/apps/wine.svg
 export DESKTOP=/usr/share/applications/wine.desktop
-export APPNAME=BEAUTIFUL_WINE_APP_NAME
+export APPNAME=Rufus
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
-export WINE_MAIN_BIN=WINE_BINARY_NAME
+export WINE_MAIN_BIN=rufus
+export STRACE_BINARY=wine
+export STRACE_FLAGS=/tmp/rufus
 #export WINE_STRACE_TIME=15
 #export WINE_STRACE_BINARY=/PATH/TO/EXE_HERE
 #export WINE_STRACE_FLAGS='--disable-gpu'
@@ -26,9 +28,11 @@ export WINE_MAIN_BIN=WINE_BINARY_NAME
 #export DEPLOY_OPENGL=1
 
 # Download and install Windows app to ./AppDir/share/WINE_MAIN_BIN folder (portable version is preferred)
+wget https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe ./AppDir/share/rufus/rufus
 
 # Trace wine app from path above and cleanup unneded wine dependencies
-wine-strace /PATH/TO/EXE_HERE
+cp -v ./AppDir/share/rufus/rufus /tmp/rufus
+wine-strace /tmp/rufus
 
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
 quick-sharun                   \
