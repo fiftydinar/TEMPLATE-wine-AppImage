@@ -39,7 +39,5 @@ wine-strace /tmp/rufus.exe
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
 quick-sharun /usr/bin/wine
 
-wine-fixes-after-deploy
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
