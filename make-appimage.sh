@@ -37,7 +37,5 @@ quick-sharun                   \
 	/usr/bin/wget              \
 	/usr/bin/zenity
 
-wine-fixes-after-deploy
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
