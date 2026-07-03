@@ -27,7 +27,7 @@ export WINE_MAIN_BIN=WINE_BINARY_NAME
 
 # Download and install Windows app to ./AppDir/share/WINE_MAIN_BIN folder (portable version is preferred)
 
-# Trace and cleanup unneded wine dependencies
+# Trace wine app from path above and cleanup unneded wine dependencies
 wine-strace /PATH/TO/EXE_HERE
 
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
