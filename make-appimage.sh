@@ -13,7 +13,7 @@ export DESKTOP=/usr/share/applications/wine.desktop
 export APPNAME=BEAUTIFUL_WINE_APP_NAME
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
-export WINE_MAIN_BIN=WINE_BINARY_NAME
+export WINE_MAIN_BIN=WINE_BINARY_NAME.exe
 #export WINE_STRACE_TIME=15
 #export WINE_STRACE_BINARY=/PATH/TO/EXE_HERE
 #export WINE_STRACE_FLAGS='--disable-gpu'
@@ -28,7 +28,7 @@ export WINE_MAIN_BIN=WINE_BINARY_NAME
 # Download and install Windows app to ./AppDir/share/WINE_MAIN_BIN folder (portable version is preferred)
 
 # Trace wine app from path above and cleanup unneded wine dependencies
-wine-strace /PATH/TO/EXE_HERE
+wine-strace ./AppDir/share/"$WINE_MAIN_BIN"
 
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
 quick-sharun                   \
