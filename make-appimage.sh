@@ -29,7 +29,7 @@ export STRACE_FLAGS=/tmp/rufus
 
 # Download and install Windows app to ./AppDir/share/WINE_MAIN_BIN folder (portable version is preferred)
 mkdir -p ./AppDir/share/rufus/rufus
-wget https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe ./AppDir/share/rufus/rufus
+wget https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe -O ./AppDir/share/rufus/rufus
 
 # Trace wine app from path above and cleanup unneded wine dependencies
 cp -v ./AppDir/share/rufus/rufus /tmp/rufus
