@@ -11,11 +11,12 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/bcf6aa9582f676e1c93d0022319e6055cd1f2de2/Papirus/64x64/apps/wine.svg
 export DESKTOP=/usr/share/applications/wine.desktop
 export APPNAME=Rufus
+export MAIN_BIN=rufus
 export STRACE_BINARY=wine
 export STRACE_FLAGS=/tmp/rufus.exe
 # Wine app deployment variables, similar to 'quick-sharun'
 export WINEPREFIX=/tmp/wine
-export WINE_MAIN_BIN=rufus.exe
+export WINE_MAIN_BIN=rufus
 #export WINE_STRACE_TIME=15
 #export WINE_STRACE_BINARY=/PATH/TO/EXE_HERE
 #export WINE_STRACE_FLAGS='--disable-gpu'
@@ -36,6 +37,7 @@ chmod +x ./AppDir/share/rufus/rufus.exe
 cp -v ./AppDir/share/rufus/rufus.exe /tmp/rufus.exe
 wine-strace /tmp/rufus.exe
 
+mkdir -p ./AppDir/bin/"$WINE_MAIN_BIN"
 cat <<EOF > ./AppDir/bin/"$WINE_MAIN_BIN"
 #!/bin/sh
 if [ ! -d "\${WINEPREFIX}" ]; then
