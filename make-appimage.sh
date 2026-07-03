@@ -25,7 +25,7 @@ export WINE_MAIN_BIN=WINE_BINARY_NAME
 #export DEPLOY_VULKAN=1
 #export DEPLOY_OPENGL=1
 
-# Download and install Windows app here (portable version is preferred)
+# Download and install Windows app to ./AppDir/share folder (portable version is preferred)
 
 # Trace and cleanup unneded wine dependencies
 wine-strace /PATH/TO/EXE_HERE
