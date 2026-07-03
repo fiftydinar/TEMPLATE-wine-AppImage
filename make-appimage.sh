@@ -37,7 +37,8 @@ cp -v ./AppDir/share/rufus/rufus.exe /tmp/rufus.exe
 wine-strace /tmp/rufus.exe
 
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
-quick-sharun /usr/bin/wine
+quick-sharun /usr/bin/wine* \
+             /usr/lib/wine
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
