@@ -33,9 +33,7 @@ wine-strace ./AppDir/share/"$WINE_MAIN_BIN"
 # Deploy dependencies (wine bin + libs, wget and zenity are basic ones)
 quick-sharun                   \
 	/usr/bin/wine*             \
-	/usr/lib/wine              \
-	/usr/bin/wget              \
-	/usr/bin/zenity
+	/usr/lib/wine
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
